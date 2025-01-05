@@ -4,6 +4,9 @@ const { UserController } = require('../../controllers');
 const router = express.Router();
 
 //  /api/v1/signup/  POST
-router.post('/',UserController.signup);
+router.post('/signup',UserController.signup);
+
+//  /api/v1/signin/  POST
+router.post('/signin',UserController.signin);
 
 module.exports = router;
