@@ -28,7 +28,7 @@ module.exports = (sequelize, DataTypes) => {
       validate: {
         len: [8,30],
         isStrongPassword(value){
-          const regex = /^(?=.*[A-Z])(?=.*\d)(?=.[@$!#%&?*])[A-Za-z\d@$!%*?&#]+$/;
+          const regex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]+$/;
           if(!regex.test(value)){
             throw new Error(
               'Password must contain at least one lowercase letter, one uppercase letter, one special character, and one digit.'
