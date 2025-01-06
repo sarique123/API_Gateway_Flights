@@ -1,6 +1,7 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
 const { ServerConfig } = require('../../config');
+
 function checkPassword(plainPassword,encryptedPassword){
     try {
         return bcrypt.compareSync(plainPassword,encryptedPassword);

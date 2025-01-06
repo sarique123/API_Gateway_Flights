@@ -13,7 +13,7 @@ async function signup(req,res) {
             password: req.body.password
         });
         SuccessResponse.data = user;
-        SuccessResponse.message = 'Successfully created an User';
+        SuccessResponse.message = 'Successfully created an User and signUp';
         return res
         .status(StatusCodes.CREATED)
         .json(SuccessResponse);
