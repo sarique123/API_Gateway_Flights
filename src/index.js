@@ -33,6 +33,7 @@ app.use(limiter);
 app.use('/flightService' , flightServiceProxy);
 
 app.use('/bookingService' , flightBookingProxy);
+
 app.use('/api', apiRoutes);
 
 app.listen(ServerConfig.PORT,()=>{
